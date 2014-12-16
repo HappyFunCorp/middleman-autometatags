@@ -61,7 +61,7 @@ module Middleman
         set_meta_tags :site => site_data['title']
         set_meta_tags "og:site_name" => site_data['title']
 
-        fall_through( site_data, :title, "title" )
+        fall_through( site_data, :title, "title" ) unless meta_tags[:title]
         fall_through( site_data, :description, "description" )
 
         # Twitter cards
